@@ -5,34 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Cadastro</title>
+
+
     <!--    css link -->
     <link rel="stylesheet" type="text/css" href="style.css">
+
+
     <style>
-        h1 {
-            
+
+        p {
+            color: white;
+            font-size: 20px;
         }
+
     </style>
+
 </head>
+
+
+<!--body-->
 <body id="formbody">
     <!--    # action=xxx xxx = arquivo para receber os dados e manipulalos assim mandando
     para um banco de dados -->
     <!-- Adcionado patterns (\d = Digitos de 0-9) (\s = Espaco vazio) (? = caracter informado antes opcional)-->
     <!--  Adcionado placeholders  -->
-    <h1>Cadastro</h1>
-    <div style="display: flex; justify-content: center; ">
-        <form id="forms" action="" method="post">
+    
+    <!-- # Titulo-->
+    <h1 style="color: tan;">Cadastro</h1>
 
+
+        <!-- Info -->
+    <p>
+        Crie sua conta na Loja
+    </p>
+
+    
+    <!-- Starting divisao para criar form -->
+    <div id="formdiv">
+
+
+        <!--Forms #forms-->
+        <form id="forms" action="signup2.html" method="post">
+
+            <!--labels and inputs-->
             <label id="formlabel" for="first_name" > Primeiro nome:</label>
             <input id="forminput" type="text" id="first_name" placeholder="Digite seu nome"minlength="3" maxlength="25" required><br>
 
             <label id="formlabel" for="last_name">Ultimo nome:</label>
-            <input id="forminput" type="text" id="last_name" minlength="3" placeholder='Sobrenome' maxlength="25" required><br>
+            <input id="forminput" type="text" id="last_name" minlength="6" placeholder='Sobrenome' maxlength="25" required><br>
 
             
             <!--Butão enviar-->
-            <input id="forminput" type="button" value="next">
+            <input id="forminput" style="background-color:tan;"  type="submit" value="next">
 
         </form>
     </div>
     <link rel="stylesheet" href="style.css">
+
+
+</body>
+
 </html>

@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        p {
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+
 </head>
-<body id="Formbody">
+
+
+<body id="formbody">
+
+
     <script>
         const tela_largura = window.innerWidth
         const tela_altura =window.innerHeight
@@ -15,17 +32,35 @@
         const middleY = tela_altura / 2
     </script>
 
-    <h1>Login</h1>
-    <!-- #best way to import images -->
-    <div style="background-image: url(/icons/faviconHuman/android-chrome-192x192.png); height: 200px; border: none; background-repeat: no-repeat;"></div>
-    <form action="login.html" id="Forms" method="post">
+  
+
+
+    <!-- # Titulo-->
+    <h1 style="color: tan;">Login</h1>
+    
+    
+    <!--info -->
+    <p>
+        Faca login na Loja
+    </p>
+    <!-- #start div -->
+    <div id="formdiv">
+
+    <!--Start form-->
+    <form id="forms" action="menu.html"  method="post">
+        <!--Start label and inputs-->
+        <label id="formlabel"for="email">Email:</label>
+        <input id="forminput"type="email" id="Email" placeholder="digiteseu@email.com" maxlength="100" required><br>
+
+        <label id="formlabel" for="password">Senha:</label>
+        <input id="forminput" type="password" id="password" placeholder="Digite sua senha" minlength="6" maxlength="30" required> <br>
         
-        <label for="email">Email:</label>
-        <input type="email" id="Email" placeholder="digiteseu@email.com" maxlength="100" required><br>
-
-        <label for="password">Senha:</label>
-        <input type="password" id="password" placeholder="Digite sua senha" minlength="6" maxlength="30" required> <br>
-
+        <input id="forminput" type="submit" value="Login">
     </form>
+
+    </div>
+
+
 </body>
+
 </html>
