@@ -20,6 +20,9 @@
             color: white;
             font-size: 20px;
         }
+        .submit-button {
+              background-color: tan;
+            }
 
     </style>
 
@@ -48,23 +51,33 @@
 
 
         <!--Forms #forms-->
-        <form id="forms" action="signup2.html" method="post">
+        <form id="forms" action="signup2.html" method="post" onsubmit=" return ValidateForm()">
 
             <!--labels and inputs-->
-            <label id="formlabel" for="first_name" > Primeiro nome:</label>
+            <label id="formlabel" for="Nome" name= > Primeiro nome:</label>
             <input id="forminput" type="text" id="first_name" placeholder="Digite seu nome"minlength="3" maxlength="25" required><br>
 
-            <label id="formlabel" for="last_name">Ultimo nome:</label>
+            <label id="formlabel" for="Ultimo nome">Ultimo nome:</label>
             <input id="forminput" type="text" id="last_name" minlength="6" placeholder='Sobrenome' maxlength="25" required><br>
 
             
             <!--Butão enviar-->
-            <input id="forminput" style="background-color:tan;"  type="submit" value="next">
+            <input id="forminput" class="submit-button"  type="submit" value="next">
 
         </form>
     </div>
-    <link rel="stylesheet" href="style.css">
-
+    <!--    Validacao Nome e Last name e armazenamento em firstname- lastname -->
+    <script>
+        function ValidateForm() {
+            var firstname = document.getElementById("first_name").value;
+            var lastName = document.getElementById("last_name").value;
+            if (firstname < 3 || firstname.length > 25) {
+                alert("Nome deve estar entre 3-25")
+                return false;
+            } 
+            return true;
+        }
+    </script>
 
 </body>
 
