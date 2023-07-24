@@ -9,54 +9,70 @@
 
     <title>Cadastro</title>
     <!--    css link -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="formstyle.css">
+
+
     <style>
         p {
             color: white;
             font-size: 20px;
+            margin-top: 50px;
         }
+       h1 {
+        color: tan;
+        margin-top: 30px;
+       } 
     </style>
 </head>
-<body id="formbody">
-    <!--    # action=xxx xxx = arquivo para receber os dados e manipulalos assim mandando
-    para um banco de dados -->
-    <!-- Adcionado patterns (\d = Digitos de 0-9) (\s = Espaco vazio) (? = caracter informado antes opcional)-->
-    <!--  Adcionado placeholders  -->
-    
+
+<body id="formbody" style="background-color: black;">
+ 
     <!-- # Titulo-->
-    <h1 style="color: tan;">Cadastro</h1>
+    <h1>Cadastro</h1>
 
 
         <!-- Info -->
     <p>
         Crie sua conta na Loja
     </p>
-    <!-- Starting divisao para criar form -->
-    <!--div-->
-    <div style="display: flex; justify-content: center; ">
+    
+    <div id="formdiv">
 
 
         <!--Forms #forms-->
         <form id="forms" action="login.html" method="post">
+
             <!--local de escrita do email-->
-            <label id="formlabel" for="email">Email:</label>
-            <input id="forminput" type="email" id="Email" placeholder="digiteseu@email.com" maxlength="100" required><br>
+            <div class="input">
+                <input class="input__field "type="email" id="Email" maxlength="100" required><br>
+                <label class="input__label" for="email">Email:</label>
+            </div>
+            
+            <div class="input">
+                <input   class="input__field"  type="password" id="password"  minlength="6" maxlength="30" required> <br>
+                <label class="input__label"  for="password">Senha:</label>
+            </div>
 
-            <label id="formlabel" for="password">Senha:</label>
-            <input id="forminput" type="password" id="password" placeholder="Crie uma senha" minlength="6" maxlength="30" required> <br>
-
-            <label id="formlabel" for="phone">Numero de telefone:</label>
-            <input id="forminput" type="tel" id="phone" placeholder="xx-xxxxxxxxx" pattern="\d{2,3}\s?\d{9}"minlength="11" required><br>
-
-            <label id="formlabel" for="dataDeNascimento">Data de nascimento:</label>
-            <input id="forminput" type="date" id="dbay" required><br>
-
-            <label id="formlabel" for="cpf" >cpf:</label>
-            <input id="forminput" type="text" id="cpf" minlength="11" pattern="\d{3}.?\d{3}.?\d{3}-?\d{2}"placeholder="123.456.789-12" required> <br><br>
+            <div class="input">
+                <input  class="input__field"   type="tel" id="phone" pattern="\d{2,3}\s?\d{9}"minlength="11" required><br>
+                <label class="input__label"  for="phone">Numero de telefone:</label>
+            </div>
+            
+            <div class="input">
+                <label  id="formlabel"for="dataDeNascimento" style="font-size: 15px;">Data de nascimento:</label>
+                <input id="forminput" type="date" id="dbay" required><br>
+            </div>
+            
+            <div class="input">
+                <input  class="input__field"   type="text" id="cpf" minlength="11" pattern="\d{3}.?\d{3}.?\d{3}-?\d{2}" required> <br><br>
+                <label class="input__label"  for="cpf" >cpf:</label>
+            </div>
+            
             <!--Butão enviar-->
-            <input id="forminput" style="background-color:tan;"  type="submit" value="next">
+            <input id="loginbutton" style="background-color:tan;"  type="submit" value="next">
 
         </form>
     </div>
-    <link rel="stylesheet" href="style.css">
-</html>
+    
+</body>
+    </html>
