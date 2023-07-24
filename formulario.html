@@ -7,7 +7,11 @@
     <title>Cadastro</title>
     <!--    css link -->
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <style>
+        h1 {
+            
+        }
+    </style>
 </head>
 <body id="formbody">
     <!--    # action=xxx xxx = arquivo para receber os dados e manipulalos assim mandando
@@ -15,36 +19,20 @@
     <!-- Adcionado patterns (\d = Digitos de 0-9) (\s = Espaco vazio) (? = caracter informado antes opcional)-->
     <!--  Adcionado placeholders  -->
     <h1>Cadastro</h1>
-    <form id="forms" action="formulario.html" method="post">
-        
-        <label for="first_name" > Primeiro nome:</label>
-        <input id="forminput" type="text" id="first_name" placeholder="Digite seu nome"minlength="3" maxlength="25" required><br>
+    <div style="display: flex; justify-content: center; ">
+        <form id="forms" action="" method="post">
 
-        <label for="last_name">Ultimo nome:</label>
-        <input id="forminput" type="text" id="last_name" minlength="3" placeholder='Sobrenome' maxlength="25" required><br>
+            <label id="formlabel" for="first_name" > Primeiro nome:</label>
+            <input id="forminput" type="text" id="first_name" placeholder="Digite seu nome"minlength="3" maxlength="25" required><br>
 
-        
-        <!--local de escrita do email-->
-        <label id="formlabel" for="email">Email:</label>
-        <input id="forminput" type="email" id="Email" placeholder="digiteseu@email.com" maxlength="100" required><br>
+            <label id="formlabel" for="last_name">Ultimo nome:</label>
+            <input id="forminput" type="text" id="last_name" minlength="3" placeholder='Sobrenome' maxlength="25" required><br>
 
-        <label id="formlabel" for="password">Senha:</label>
-        <input id="forminput" type="password" id="password" placeholder="Crie uma senha" minlength="6" maxlength="30" required> <br>
-        
-        <label id="formlabel" for="phone">Numero de telefone:</label>
-        <input id="forminput" type="tel" id="phone" placeholder="xx-xxxxxxxxx" pattern="\d{2,3}\s?\d{9}"minlength="11" required><br>
-   
-        <label id="formlabel" for="dataDeNascimento">Data de nascimento:</label>
-        <input id="forminput" type="date" id="dbay" required><br>
-        
-        <label id="formlabel" for="cpf" >cpf:</label>
-        <input id="forminput" type="text" id="cpf" minlength="11" pattern="\d{3}.?\d{3}.?\d{3}-?\d{2}"placeholder="123.456.789-12" required> <br><br>
-        
-        <!--Butão enviar-->
+            
+            <!--Butão enviar-->
+            <input id="forminput" type="button" value="next">
 
-        <input type="submit">
-
-
-    <title>Projeto Site</title>
+        </form>
+    </div>
     <link rel="stylesheet" href="style.css">
 </html>
