@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="Formbody">
+    <script>
+        const tela_largura = window.innerWidth
+        const tela_altura =window.innerHeight
+
+        const middleX = tela_largura / 2
+        const middleY = tela_altura / 2
+    </script>
+
+    <h1>Login</h1>
+    <!-- #best way to import images -->
+    <div style="background-image: url(/icons/faviconHuman/android-chrome-192x192.png); height: 200px; border: none; background-repeat: no-repeat;"></div>
+    <form action="login.html" id="Forms" method="post">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="Email" placeholder="digiteseu@email.com" maxlength="100" required><br>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" placeholder="Digite sua senha" minlength="6" maxlength="30" required> <br>
+
+    </form>
+</body>
+</html>
