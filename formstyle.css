@@ -12,7 +12,6 @@
     outline: 2px solid #fff;
 }
 .input__label{
-    position: absolute;
     top: 0;
     left: 0;
     transform: translate(10px, 10px);
