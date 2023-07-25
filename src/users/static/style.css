@@ -48,6 +48,11 @@
     color: #333;
 }
 
+.pedosite {
+    margin-top: 300px;
+}
+
+
 /* Qualquer formulario como login ou cadastro deve ter forms com id forms e body com id formbody
 forminput e formlabel
 */
@@ -94,7 +99,7 @@ forminput e formlabel
 
 #cabecalho{
     display: flex;  
-    margin-top: 5px;
+    margin-top: 20px;
 
 }
 header {

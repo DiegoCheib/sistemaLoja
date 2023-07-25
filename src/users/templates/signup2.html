@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  Website favicon -->
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+
+    <title>Cadastro</title>
+    <!--    css link -->
+    <link rel="stylesheet" href="formstyle.css">
+
+
+    <style>
+        p {
+            color: white;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+       h1 {
+        color: tan;
+        margin-top: 30px;
+       } 
+    </style>
+</head>
+
+<body id="formbody" style="background-color: black;">
+ 
+    <!-- # Titulo-->
+    <h1>Cadastro</h1>
+
+
+        <!-- Info -->
+    <p>
+        Crie sua conta na Loja
+    </p>
+    
+    <div id="formdiv">
+
+
+        <!--Forms #forms-->
+        <form id="forms" action="login.html" method="post">
+
+            <!--local de escrita do email-->
+            <div class="input">
+                <input class="input__field "type="email" id="Email" maxlength="100" required><br>
+                <label class="input__label" for="email">Email:</label>
+            </div>
+            
+            <div class="input">
+                <input   class="input__field"  type="password" id="password"  minlength="6" maxlength="30" required> <br>
+                <label class="input__label"  for="password">Senha:</label>
+            </div>
+
+            <div class="input">
+                <input  class="input__field"   type="tel" id="phone" pattern="\d{2,3}\s?\d{9}"minlength="11" required><br>
+                <label class="input__label"  for="phone">Numero de telefone:</label>
+            </div>
+            
+            <div class="input">
+                <label  id="formlabel"for="dataDeNascimento" style="font-size: 15px;">Data de nascimento:</label>
+                <input id="forminput" type="date" id="dbay" required><br>
+            </div>
+            
+            <div class="input">
+                <input  class="input__field"   type="text" id="cpf" minlength="11" pattern="\d{3}.?\d{3}.?\d{3}-?\d{2}" required> <br><br>
+                <label class="input__label"  for="cpf" >cpf:</label>
+            </div>
+            
+            <!--Butão enviar-->
+            <input id="loginbutton" style="background-color:tan;"  type="submit" value="next">
+
+        </form>
+    </div>
+    
+</body>
+    </html>

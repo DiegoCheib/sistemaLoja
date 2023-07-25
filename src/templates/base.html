@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+
     <meta charset="UTF-8">
-    
+  
     <!-- Stylesheet - fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!--  Website favicon -->
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    
+    <link rel="stylesheet" href="static/css/formstyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 
     <title>Portifolio</title>
 
     <!--  css link-->
-    <link rel="stylesheet" href="style.css">
-    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
     <style>
        body {
         background-color: rgb(0, 0, 0);
-       }
-       div {
+    }
+
+
+    div {
         color: tan;
-       }
-       footer {
+    }
+
+    footer {
         color: aliceblue;
-       }
+    }
+    hr {
+        color: black;
+    }
+        
     </style>
 
 </head>
@@ -38,25 +47,31 @@
 
             <h1>LOJA</h1>
             <!-- # Opcoes mid top-->
-            <a id="faIcons" href="Estrutura.html"><i id="falicons" class="fa-solid fa-house-chimney"></i></a>
+            <a id="faIcons" href="base.html"><i id="falicons" class="fa-solid fa-house-chimney"></i></a>
             <a id="faIcons" href="login.html"><i id="falicons" class="fa-solid fa-arrow-right-to-bracket"></i></a>
-            <a id="faIcons" href="signup.html"><i id="falicons" class="fa-solid fa-user-plus"></i></a></div>
+            <a id="faIcons" href="templates/signup.html"><i id="falicons" class="fa-solid fa-user-plus"></i></a></div>
      
         <!-- # Menu lateral opcoes -->
     </header>
+</div>
 
-    </div>
     
 <br>
-<hr style="color: beige;">
+<hr>
+
+{% block base %}
+
+{% endblock %}
 
     </header>
     <!-- # Pe do site-->
-    <footer>
+    <footer class="pedosite">
+    <hr>
+
         Author: Diego Cheib / Roberto Fernandino <br>
         &copy; Copyright Reserved <br>
         <i style="color: beige;" class="fa-solid fa-envelope"></i>
-        <small style="margin-left: 10px;"><a style="color: tan;"" href="mailto: diegocheib@gmail.com">diegocheib@gmail.com</a></small>
+        <small style="margin-left: 10px;"><a style="color: tan;" href="mailto: diegocheib@gmail.com">diegocheib@gmail.com</a></small>
         <i style="color: beige;" id='mailicon'class="fa-solid fa-envelope"></i>
         <small style="margin-left: 10px;"><a style="color: tan;"href="mailto: romfernandino@gmail.com">romfernandino@gmail.com</a></small>
 
