@@ -8,18 +8,18 @@
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     
     <!--    css link -->
-    <link rel="stylesheet" type="text/css" href="formstyle.css">
-
-
+    <link rel="stylesheet" href="formstyle.css">
     <style>
-        p {
-            color: white;
-            font-size: 20px;
+        h1 {
+            margin-top: 50px;
+            color: tan;
         }
-        .submit-button {
-              background-color: tan;
-            }
+        h2{
+            margin-top: 50px;
+            color: tan;
+        }
     </style>
+
 </head>
 <!--body-->
 <body id="formbody">
@@ -29,32 +29,28 @@
     <!--  Adcionado placeholders  -->
     
     <!-- # Titulo-->
-    <h1 style="color: tan;">Cadastro</h1>
-
-
+    <h1>Cadastro</h1>
         <!-- Info -->
-    <p>
-        Crie sua conta na Loja
-    </p>
-
+    <h2>Crie sua conta na Loja</h2>
 
     <!-- Starting divisao para criar form -->
     <div id="formdiv">
-
 
         <!--Forms #forms-->
         <form id="forms" action="signup2.html" method="post" onsubmit=" return ValidateForm()">
             <div class="input">
             <!--labels and inputs-->
-            <label class="input__label" id="formlabel" for="Nome" name= > Primeiro nome:</label>
-            <input class="input__field" id="forminput" type="text" id="first_name" minlength="3" maxlength="25" required><br>
+                <input class="input__field" type="text" id="primeiro nome" minlength="3" maxlength="25" required>
+                <label class="input__label" for="Nome">Primeiro nome</label>
+            </div>
 
-            <label class="input__label" id="formlabel" for="Ultimo nome">Ultimo nome:</label>
-            <input class="input__field" id="forminput" type="text" id="last_name" minlength="6"  maxlength="25" required><br>
-
+            <div class="input">
+                <input class="input__field" type="text" id="last_name" minlength="3"  maxlength="25" required>
+                <label class="input__label" for="sobrenome" >Sobrenome</label>
+            </div>
             
             <!--Butão enviar-->
-            <input id="forminput" class="submit-button"  type="submit" value="next">
+            <input id="loginbutton" class="submit-button"  type="submit" value="next">
 
         </form>
     </div>
@@ -70,7 +66,5 @@
             return true;
         }
     </script>
-
 </body>
-
 </html>

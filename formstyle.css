@@ -11,8 +11,8 @@
     border-radius: 4px;
     font: inherit;
     color: #000000;
-    background-color: grey;
-    outline: 2px solid grey;
+    background-color: rgb(55, 55, 55);
+    outline: 2px solid rgb(55, 55, 55);
     font-size: 20px;
 
 }
@@ -24,7 +24,7 @@
     transform-origin: left;
     transition: 0.25s;
     font-size: 17px;
-    color: rgb(0, 0, 0);    
+    color: rgb(102, 102, 102);    
 }
 .input__field:focus-visible ~ .input__label,
 .input__field:valid ~ .input__label{
@@ -117,6 +117,7 @@ header {
 #mailicon {
         margin-left: 5px;
     }
+
 
 
 

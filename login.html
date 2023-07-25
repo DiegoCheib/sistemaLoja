@@ -9,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--  Website favicon -->
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">    
     <title>Login</title>
 
     <!--css import-->
@@ -18,42 +17,43 @@
 
 
     <style>
-        p {
-            color: white;
-            font-size: 20px;
-            margin-top: 100px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
         h1 {
             margin-top: 100px;
-            font-size: 50px;
+            font-size: 40px;
+            color: tan;
+        }
+        h2{margin-top: 100px;
+            font-size: 30px;
+            color: tan;
+        }
+        p{
+            font-size: 15px;
             color: tan;
         }
     </style>
 
 </head>
 
-
+<header>
+</header>
 <body id="formbody">
-
-
+    
+    
     <script>
         const tela_largura = window.innerWidth
         const tela_altura =window.innerHeight
-
+        
         const middleX = tela_largura / 2
         const middleY = tela_altura / 2
-    </script>
-
-  
+        </script>
 
 
-    <!-- # Titulo-->
+
+
+<!-- # Titulo-->
     <h1>Login</h1>
      <!--info -->
-     <p>
-        Faca login na Loja
-    </p>
+     <h2>Faça login na Loja</h2>
 
     
    
@@ -68,26 +68,20 @@
     
         <div class="input">
             <input class="input__field"   type="email" id="Email"  maxlength="100" required><br>
-            <label   class="input__label" for="email">Email</label>
-
-        
+            <label class="input__label" for="email">Email</label>
         </div>
 
        
-
         <div class="input">
             <input  class="input__field"  type="password" id="password" minlength="6" maxlength="30" required> <br>
             <label  class="input__label"  for="password" >Senha</label>
-            
-        
-            <span class="input__icon-wrapper ">
-                <i class="input__icon ri-eye-off-line"></i>
-                
-            </span>
         </div>
-        
-        
+
+
         <input id="loginbutton" type="submit" value="Login">
+
+
+        <p>No account?<a href="signup.html" style="color: tan;"> Create One</a></p>
     </form>
 
     </div>
