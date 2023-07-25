@@ -6,28 +6,24 @@
   
     <!-- Stylesheet - fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    {% load static %}
     <!--  Website favicon -->
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="static/css/formstyle.css">
+    <link rel="shortcut icon" href="{% static 'favicon.ico'%}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'formstyle.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 
     <title>Portifolio</title>
 
     <!--  css link-->
-    {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
     <style>
-       body {
+        
+    body {
         background-color: rgb(0, 0, 0);
     }
 
-
-    div {
-        color: tan;
-    }
 
     footer {
         color: aliceblue;
@@ -35,46 +31,60 @@
     hr {
         color: black;
     }
-        
+    .fa-envelope
+    {
+        color: beige;
+        margin-left: 5px;
+    }
+    
     </style>
+<!-- # Cabecalho -->
+    <div>
+        <h1 class="header">LOJA (seu icone aqui)</h1>
+        <div id="iconsdiv">
+        <!-- # Opcoes mid top-->
+        <a class="faIcons" href="base.html"><i class="fa-solid fa-house-chimney"></i></a>
+        <a class="faIcons" href="login.html"><i  class="fa-solid fa-arrow-right-to-bracket"></i></a>
+        <a class="faIcons" href="templates/signup.html"><i class="fa-solid fa-user-plus"></i></a></div>
+        </div>
+    </div>
+    <!-- # Menu lateral opcoes -->
+
+
 
 </head>
 
 <body>
-    <div>
-    <!-- # Cabecalho -->
-    <header id="cabecalho" >
 
-            <h1>LOJA</h1>
-            <!-- # Opcoes mid top-->
-            <a id="faIcons" href="base.html"><i id="falicons" class="fa-solid fa-house-chimney"></i></a>
-            <a id="faIcons" href="login.html"><i id="falicons" class="fa-solid fa-arrow-right-to-bracket"></i></a>
-            <a id="faIcons" href="templates/signup.html"><i id="falicons" class="fa-solid fa-user-plus"></i></a></div>
-     
-        <!-- # Menu lateral opcoes -->
-    </header>
-</div>
-
+    <br>
+    <hr>
     
-<br>
-<hr>
 
 {% block base %}
 
 {% endblock %}
 
-    </header>
     <!-- # Pe do site-->
-    <footer class="pedosite">
-    <hr>
 
+
+</body>
+
+<footer class="pedosite">
+    <hr>
         Author: Diego Cheib / Roberto Fernandino <br>
         &copy; Copyright Reserved <br>
-        <i style="color: beige;" class="fa-solid fa-envelope"></i>
-        <small style="margin-left: 10px;"><a style="color: tan;" href="mailto: diegocheib@gmail.com">diegocheib@gmail.com</a></small>
-        <i style="color: beige;" id='mailicon'class="fa-solid fa-envelope"></i>
-        <small style="margin-left: 10px;"><a style="color: tan;"href="mailto: romfernandino@gmail.com">romfernandino@gmail.com</a></small>
+        <div class="emailcontainer">
+        <i  class="fa-solid fa-envelope"></i>
+        <span> diegocheib@gmail.com</span>
+        <button><i class="fa-regular fa-copy"></i></button>
+        </div>
+
+        <div class="emailcontainer">
+            <i class="fa-solid fa-envelope"></i>
+            <span> romfernandno@gmail.com </span>
+        <button ><i class="fa-regular fa-copy"></i></button>
+
+        </div>
 
     </footer>
-</body>
 </html>

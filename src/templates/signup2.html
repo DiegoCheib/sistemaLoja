@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    {% extends 'base.html' %}
+    {% block base %}
+    <head>
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--  Website favicon -->
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-
-    <title>Cadastro</title>
+    
+    
     <!--    css link -->
-    <link rel="stylesheet" href="formstyle.css">
 
-
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'formstyle.css' %}">
+    
+    
     <style>
         p {
             color: white;
@@ -21,10 +22,10 @@
        h1 {
         color: tan;
         margin-top: 30px;
-       } 
+    } 
     </style>
-</head>
 
+</head>
 <body id="formbody" style="background-color: black;">
  
     <!-- # Titulo-->
@@ -75,4 +76,5 @@
     </div>
     
 </body>
+{% endblock %}
     </html>

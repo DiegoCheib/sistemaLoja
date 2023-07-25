@@ -1,32 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
+{% extends 'base.html' %}
+{% block base %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--  Website favicon -->
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    
     <!--    css link -->
-    <link rel="stylesheet" href="formstyle.css">
-    <style>
-        h1 {
-            margin-top: 50px;
-            color: tan;
-        }
-        h2{
-            margin-top: 50px;
-            color: tan;
-        }
-    </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'formstyle.css' %}">
+
+   
 
 </head>
 <!--body-->
 <body id="formbody">
-    <!--    # action=xxx xxx = arquivo para receber os dados e manipulalos assim mandando
-    para um banco de dados -->
     <!-- Adcionado patterns (\d = Digitos de 0-9) (\s = Espaco vazio) (? = caracter informado antes opcional)-->
-    <!--  Adcionado placeholders  -->
     
     <!-- # Titulo-->
     <h1>Cadastro</h1>
@@ -37,7 +28,8 @@
     <div id="formdiv">
 
         <!--Forms #forms-->
-        <form id="forms" action="signup2.html" method="post" onsubmit=" return ValidateForm()">
+        <form id="forms" action="{% static 'signup2.html' %}" method="post" onsubmit=" return ValidateForm()">
+    
             <div class="input">
             <!--labels and inputs-->
                 <input class="input__field" type="text" id="primeiro nome" minlength="3" maxlength="25" required>
@@ -54,17 +46,8 @@
 
         </form>
     </div>
-    <!--    Validacao Nome e Last name e armazenamento em firstname- lastname -->
-    <script>
-        function ValidateForm() {
-            var firstname = document.getElementById("first_name").value;
-            var lastName = document.getElementById("last_name").value;
-            if (firstname < 3 || firstname.length > 25) {
-                alert("Nome deve estar entre 3-25")
-                return false;
-            } 
-            return true;
-        }
-    </script>
 </body>
+
+{% endblock %}
+
 </html>
