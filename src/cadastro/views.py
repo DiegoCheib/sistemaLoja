@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django import forms
 from .forms import inputName
-from .models import userTest
+from .models import userTest as useradd
 from django.urls import reverse
 import pytest
 from django.http import HttpResponseRedirect
@@ -16,15 +16,16 @@ def signup1_view(request, *args, **kwargs):
         sobrenome = inputName(request.POST)
         if nome.is_valid() and sobrenome.is_valid():
             nome = nome.cleaned_data['nome']
-            sobrenome = sobrenome.cleaned_data['sobrenome']
-
+            sobrenome = sobrenome.cleaned_data["sobrenome"]
+            user_new = useradd()
+            user_new.username, user_new.usersobrenome = nome, sobrenome
+            user_new.save()
     else:
-        nome = inputName()
+        nome      = inputName()
         sobrenome = inputName()
     
     return render(request, "signup.html", {
         "inputnome": nome,
-        'inputsobrenome': sobrenome
     })
 
 def signup2_view(request, *args, **kwargs):

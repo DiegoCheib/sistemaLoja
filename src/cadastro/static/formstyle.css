@@ -3,6 +3,7 @@
   margin-bottom: 40px; }
 
 .input__field {
+  display: grid;
   padding: 22px;
   width: 300px;
   border: none;
@@ -14,6 +15,7 @@
   font-size: 30px; }
 
 .input__label {
+  display: grid;
   position: absolute;
   top: 0;
   left: 0;

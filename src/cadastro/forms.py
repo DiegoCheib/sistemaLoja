@@ -8,5 +8,15 @@ class inputName(forms.Form):
         "name": "nome",
         "minlength": "3",
         "maxlength": "25",
+        "display": "grid",
         "required": True}))
+    sobrenome = forms.CharField(label='', help_text='',widget=forms.TextInput(attrs={
+        "class": "input__field",
+        "nome": "sobrenome",
+        "minlength": "3",
+        "maxlength": "25",
+        "display": "grid",
+        "required": True}))
+
+
     
