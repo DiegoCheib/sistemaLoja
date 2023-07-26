@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
 {% extends "base.html" %}
 
-{% block base %}
+{% block basebody %}
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
     <title>Login</title>
 
     <!--css import-->
-    <link rel="stylesheet" href="static/css/formstyle.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'formstyle.css'}">
 
 
     <style>
@@ -67,7 +65,7 @@
         
 
     <!--Start form-->
-    <form id="forms" action="menu.html"  method="post">
+    <form id="forms" action=""  method="post">
         <!--Start label and inputs-->
     
         <div class="input">
@@ -85,7 +83,7 @@
         <input id="loginbutton" type="submit" value="Login">
 
 
-        <p>No account?<a href="signup.html" style="color: tan;"> Create One</a></p>
+        <p>No account?<a href="{% url 'cadastro:signupview1' %}" style="color: tan;"> Create One</a></p>
     </form>
 
     </div>

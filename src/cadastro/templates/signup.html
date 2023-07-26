@@ -1,8 +1,12 @@
 {% extends 'base.html' %}    
 {% block basebody %}
+
 <!--body-->
 <body id="formbody">
     <!-- Adcionado patterns (\d = Digitos de 0-9) (\s = Espaco vazio) (? = caracter informado antes opcional)-->
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'formstyle.css' %}">
     
     <!-- # Titulo-->
     <h1>Cadastro</h1>
@@ -13,18 +17,18 @@
     <div id="formdiv">
 
         <!--Forms #forms-->
-        <form id="forms" action="{% url 'users:second_signup_form' %}" method="post">
+        <form id="forms" action="{% url 'cadastro:signupview1' %}" method="post">
             <!--Obrigatorio para forms-->
             {% csrf_token %}
 
             <div class="input">
             <!--labels and inputs-->
-                {{ nomeinput }}
-                <label class="input__label" for="Nome">Primeiro nome</label>
+                {{ inputnome }}
+                <label class="input__label" for="Nome" >Primeiro nome</label>
             </div>
 
             <div class="input">
-                {{ sobrenomeinput }}
+                {{ inputsobrenome }}
                 <label class="input__label" for="sobrenome" >Sobrenome</label>
             </div>
             

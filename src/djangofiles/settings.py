@@ -40,8 +40,8 @@ INSTALLED_APPS = [
 
     #own
 
-    'cadastro',
     'login',
+    'cadastro',
 ]
 
 MIDDLEWARE = [

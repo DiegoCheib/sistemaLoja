@@ -1,6 +1,7 @@
 from django.urls import path
+from cadastro import views
 
-from . import views
+app_name = "cadastro"
 
 urlpatterns = [
     path('', views.signup1_view, name='signupview1'),
