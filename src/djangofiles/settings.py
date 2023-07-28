@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'login',
     'cadastro',
+    'home',
 ]
 
 MIDDLEWARE = [
