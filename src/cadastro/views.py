@@ -3,8 +3,6 @@ from django import forms
 from .forms import *
 from .models import userTest as useradd
 from django.urls import reverse
-import pytest
-from django.http import HttpResponseRedirect
 
 # Create your views here.
 '''
