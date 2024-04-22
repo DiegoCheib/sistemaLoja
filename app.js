@@ -20,7 +20,6 @@ const upload = multer({ storage });
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 app.use(helmet());
 app.use(session({
   name: 'session',
@@ -32,6 +31,7 @@ app.use(session({
 }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.render('index');
@@ -98,6 +98,11 @@ app.post('/post', validateToken, upload.single('picture'), async (req, res) => {
     console.log('Something went wrong', err);
     res.status(500).send(`Error! ${err}`);
   }
+});
+
+app.get('/notifications', (req, res) => {
+  res.send('ok');
+  console.log(req.body);
 });
 
 module.exports = app;
